@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Poncho",
+  "description": "Gestionnaire de mdp",
+  "version": "1.0",
+  "icons": {
+    "16": "media/poncho_logo.png",
+    "32": "media/poncho_logo.png",
+    "48": "media/poncho_logo.png",
+    "128": "media/poncho_logo.png"
+  },
+  "action": {
+    "default_title": "Poncho",
+    "default_icon": "media/poncho_logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "extension_chrome.js"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}
+
