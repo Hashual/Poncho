@@ -1,17 +1,23 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<title>Popup</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="utf-8">
+    <title>Popup</title>
+    <link rel="stylesheet" type="text/css" href="./popup.css">
     <script defer src="./extension_chrome.js"></script>
 </head>
+
 <body>
-    <form>
-        <a href="index.html">Connection</a>
-        <input type="password" id="connection" placeholder="Entrez un mot de passe">
-        <br>
-        <button type="button" id="envoyer">Envoyer</button>
-    </form>
+    <p id="affiche_connexion">connexion</p>
+
+    <div id="login">
+        <form>
+            <input type="password" id="connexion" placeholder="Entrez un mot de passe">
+            <br>
+            <button type="button" id="envoyer">Envoyer</button>
+        </form>
+    </div>
 </body>
 
+</html>

@@ -3,6 +3,10 @@
   "name": "Poncho",
   "description": "Gestionnaire de mdp",
   "version": "1.0",
+  "permissions": [
+    "storage"
+  ],
+
   "icons": {
     "16": "media/poncho_logo.png",
     "32": "media/poncho_logo.png",
