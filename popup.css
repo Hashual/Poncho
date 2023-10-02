@@ -38,6 +38,8 @@ q:before, q:after {
 #login{
     width:250px;
     text-align: center;
+    display:flex;
+    justify-content: center;
     margin-bottom:10px;
 }
 
