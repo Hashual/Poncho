@@ -1,33 +1,41 @@
+
 {
   "manifest_version": 3,
   "name": "Poncho",
   "description": "Gestionnaire de mdp",
   "version": "1.0",
   "permissions": [
-    "storage"
+      "storage"
   ],
 
   "icons": {
-    "16": "media/poncho_logo.png",
-    "32": "media/poncho_logo.png",
-    "48": "media/poncho_logo.png",
-    "128": "media/poncho_logo.png"
+      "16": "media/poncho_logo.png",
+      "32": "media/poncho_logo.png",
+      "48": "media/poncho_logo.png",
+      "128": "media/poncho_logo.png"
   },
+
+  "background": {
+      "service_worker": "background.js"
+  },
+
   "action": {
-    "default_title": "Poncho",
-    "default_icon": "media/poncho_logo.png",
-    "default_popup": "popup.html"
+      "default_title": "Poncho",
+      "default_icon": "media/poncho_logo.png",
+      "default_popup": "choose_login.html",
+      "default_popup": "authentification.html"
+
   },
+
   "content_scripts": [
-    {
-      "js": [
-        "extension_chrome.js"
-      ],
-      "matches": [
-        "https://*/*",
-        "http://*/*"
-      ]
-    }
+      {
+          "js": [
+              "authentification.js"
+          ],
+          "matches": [
+              "https://*/*",
+              "http://*/*"
+          ]
+      }
   ]
 }
-
