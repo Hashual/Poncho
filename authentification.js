@@ -2,6 +2,7 @@
 
 let mot_de_passe = [];
 const motDePassePredefini = "Toto";
+const motDePassePredefini2 = "Tata";
 
 // Charger les données stockées au démarrage de l'extension
 chrome.storage.sync.get("mot_de_passe", function (result) {
@@ -34,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (saisieUtilisateur === motDePassePredefini) {
             // Mot de passe correct, envoyer un message au script d'arrière-plan pour déclencher la redirection
             chrome.runtime.sendMessage({ redirectToMainPage: true });
-        } else {
+
+        }else if (saisieUtilisateur === motDePassePredefini2) {
+            // Mot de passe correct, envoyer un message au script d'arrière-plan pour déclencher la redirection
+            window.location.href = "choose_login.html";       
+        }else {
             // Mot de passe incorrect, afficher un message d'erreur
             alert("Mot de passe incorrect. Veuillez réessayer.");
         }
