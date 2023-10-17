@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
     }
     if (request.identifiants) {
-       console.log(result.identifiants)
+       console.log(request.identifiants)
     }
 });
 

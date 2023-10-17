@@ -5,7 +5,8 @@
   "description": "Gestionnaire de mdp",
   "version": "1.0",
   "permissions": [
-      "storage"
+      "storage",
+      "tabs"
   ],
 
   "icons": {
@@ -30,7 +31,10 @@
   "content_scripts": [
       {
           "js": [
-              "authentification.js"
+              "authentification.js",
+              "choose_login.js"
+              
+
           ],
           "matches": [
               "https://*/*",

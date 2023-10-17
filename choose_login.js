@@ -6,9 +6,9 @@ function NomDeDomaine() {
         });
     });
 }
-
 NomDeDomaine().then((domaine) => {
+    console.log(domaine);
     chrome.storage.sync.get(domaine, function (result) {
-        chrome.runtime.sendMessage({identifiants: result});
     })
 });
+
