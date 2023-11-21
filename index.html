@@ -3,17 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>Accueil</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-    <script src="./index.js"></script>
+    <header>
+        <script src="./index.js"></script>
+    </header>
     <div>
         <form>
             <button type="button" id="add_user">Ajouter un login</button>
             <button type="button" id="delete_user">Supprimer un login</button>
         </form>
 
-        <!-- Div pour ajouter un nouvel utilisateur -->
         <div id="addUserDiv" style="display: none;">
             <h3>Ajouter un nouvel utilisateur</h3>
             <label for="new_username">Nom d'utilisateur:</label>
@@ -23,6 +24,14 @@
             <input type="password" id="new_password" name="new_password"><br>
 
             <button type="button" id="confirm_add_user">Confirmer</button>
+        </div>
+
+        <div id="suprUserDiv" style="display: none;">
+            <h3>Supprimer un utilisateur</h3>
+            <label for="supr_username">Nom d'utilisateur:</label>
+            <input type="text" id="supr_username" name="supr_username"><br>
+
+            <button type="button" id="confirm_supr_user">Confirmer</button>
         </div>
     </div>
 </body>

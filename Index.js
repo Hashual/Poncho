@@ -2,10 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const addUserButton = document.getElementById("add_user");
     const deleteUserButton = document.getElementById("delete_user");
     const addUserDiv = document.getElementById("addUserDiv");
+    const suprUserDiv = document.getElementById("suprUserDiv");
 
     addUserButton.addEventListener('click', function() {
         // Afficher la div pour ajouter un utilisateur
         addUserDiv.style.display = 'block';
+        suprUserDiv.style.display = 'none';
+
+    
+    });
+
+    deleteUserButton.addEventListener('click', function() {
+        suprUserDiv.style.display = 'block';
+        addUserDiv.style.display = 'none';
+
     });
 
     deleteUserButton.addEventListener('click', function(event) {
@@ -25,5 +35,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Cacher la div après l'ajout
         addUserDiv.style.display = 'none';
+    });
+
+    const confirmSupprUserButton = document.getElementById("confirm_supr_user");
+    confirmSupprUserButton.addEventListener('click', function() {
+        const suprUsername = document.getElementById("supr_username").value;
+
+
+        //Cacher la div après l'ajout
+        addUserDiv.style.display = 'none';
+
     });
 });
